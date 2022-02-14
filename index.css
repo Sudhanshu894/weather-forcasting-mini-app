@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  background-image: url(https://i.pinimg.com/originals/cb/51/eb/cb51eb830947dc60d9e5e33fb639557f.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px 0px 60px;
+  background-color: rgba(17, 17, 17, 0.801);
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo > div:nth-child(1) {
+  padding: 10px 15px;
+  background-color: #313131;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: cursive;
+  border-radius: 15px;
+}
+.logo > div:nth-child(2) {
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  font-family: cursive;
+  padding: 10px;
+}
+.searchbox {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 20px;
+  align-items: center;
+  transition: width 0.3s ease-in-out;
+}
+.searchbox > input {
+  background-color: #313131;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.698);
+  padding-left: 25px;
+  border-radius: 25px;
+  outline: none;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.searchbox > input:focus {
+  outline: 1px solid #626262;
+}
+.searchbox > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  border-radius: 50%;
+}
+.container {
+  width: 60%;
+  height: fit-content;
+  background-color: rgba(17, 17, 17, 0.904);
+  border-radius: 15px;
+  margin: 40px auto 0px auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.container > div {
+  width: 48%;
+  height: 800px;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.time-temp > div {
+  background-color: #08080896;
+}
+.time-temp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.area {
+  width: fit-content;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.area > p {
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.801);
+}
+.time {
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.time > p {
+  font-size: 45px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.787);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.time > p:last-child {
+  font-size: 30px;
+  font-weight: 200;
+}
+.temp {
+  border-radius: 10px;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  display: flex;
+  width: fit-content;
+}
+.curr-temp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+}
+.curr-temp > img {
+  width: 180px;
+  height: auto;
+  border-radius: 15px;
+}
+.curr-temp > div {
+  font-size: 40px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.787);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: fit-content;
+  position: absolute;
+  bottom: 0;
+}
+.min-max-temp {
+  width: fit-content;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.min-max-temp > div {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.min-temp > i {
+  font-size: 40px;
+  color: aqua;
+}
+.max-temp > i {
+  font-size: 40px;
+  color: firebrick;
+}
+.min-max-temp > div > div {
+  padding-left: 10px;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.787);
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.weather-info {
+  padding: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 55%;
+}
+.weather-info > div {
+  display: flex;
+  padding: 5px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.787);
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 200;
+  justify-content: space-around;
+  background-color: #16161696;
+  border-radius: 10px;
+}
+.map {
+  padding: 30px;
+  width: 100%;
+  height: 700px;
+  border-radius: 25px;
+  background-color: #08080896;
+}
+iframe {
+  border-radius: 20px;
+}
+
+.daily-forcast {
+  height: 300px;
+  width: 85%;
+  margin: 50px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+.daily-forcast > div {
+  /* border: 1px solid white; */
+  background-color: rgba(24, 24, 27, 0.6);
+  margin-left: 15px;
+  border-radius: 15px;
+}
+.recent_forcast_weather {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: space-around;
+  border: 2px solid white;
+}
+.day_name,
+.future_day_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  background-color: rgba(17, 17, 17, 0.726);
+  width: fit-content;
+  padding: 5px 30px;
+  box-sizing: border-box;
+  margin: 5px auto;
+  border-radius: 25px;
+}
+.recent_forcast_weather_info {
+  display: flex;
+  height: 70%;
+  justify-content: space-around;
+}
+.recent_img_div {
+  width: 60%;
+  height: 100%;
+  background-image: url(http://openweathermap.org/img/wn/10d@2x.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.temp2 {
+  font-size: 35px;
+  font-weight: 300;
+  color: white;
+}
+/* .recentimg_div > img {
+  width: 100%;
+  height: 100%;
+} */
+.day_night_temp2 {
+  display: flex;
+  width: 38%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.day_temp2,
+.night_temp2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.day_temp2 > p,
+.night_temp2 > p {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+.day_temp2 > span,
+.night_temp2 > span {
+  font-size: 28px;
+  font-size: 200;
+  color: white;
+}
+.future_forcast {
+  width: 16%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.future_day_name {
+  font-size: 18px;
+}
+.futureimg_div {
+  height: 40%;
+  width: 50%;
+  margin: 0px auto;
+}
+.futureimg_div > img {
+  width: 100%;
+  height: 100%;
+}
+.future_day_night_temp2 {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}
+.future_day_temp2 > p,
+.future_night_temp2 > p {
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+  width: fit-content;
+  margin: 0px auto;
+}
+.future_day_temp2 > p > span,
+.future_night_temp2 > p > span {
+  font-size: 20px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1050px) {
+  .weather-info {
+    width: 100%;
+  }
+  .temp {
+    width: 100%;
+    padding: 10px;
+  }
+  .curr-temp > img {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .location {
+    display: none;
+  }
+  .container > div {
+    width: 100%;
+  }
+}
